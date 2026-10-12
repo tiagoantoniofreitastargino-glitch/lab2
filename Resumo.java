@@ -1,28 +1,55 @@
+/**
+ * Resumo de estudo: um pequeno texto ou anotacao sobre um tema.
+ */
 public class Resumo {
-    private String tema;
-    private String conteudo;
+    private final String titulo;
+    private String texto;
 
+    /**
+     * Cria um resumo.
+     *
+     * @param tema tema do resumo.
+     * @param conteudo texto do resumo.
+     */
     public Resumo(String tema, String conteudo) {
-        this.tema = tema;
-        this.conteudo = conteudo;
+        this.titulo = tema;
+        this.texto = conteudo;
     }
 
-
-    public String getTema() {
-        return tema;
+    /**
+     * Retorna o tema do resumo.
+     *
+     * @return o tema.
+     */
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getConteudo() {
-        return conteudo;
+    /**
+     * Retorna o texto do resumo.
+     *
+     * @return o conteudo.
+     */
+    public String getTexto() {
+        return texto;
     }
 
-
-    public void setConteudo(String conteudo) {
-        this.conteudo = conteudo;
+    /**
+     * Substitui o texto do resumo.
+     *
+     * @param novoTexto novo conteudo.
+     */
+    public void setTexto(String novoTexto) {
+        this.texto = novoTexto;
     }
 
+    /**
+     * Representa o resumo no formato "tema: conteudo".
+     *
+     * @return a representacao textual do resumo.
+     */
     @Override
     public String toString() {
-        return tema + ": " + conteudo;
+        return titulo + ": " + texto;
     }
 }
