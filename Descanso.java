@@ -6,24 +6,27 @@ public class Descanso {
     public Descanso() {
         this.horasDescanso = 0;
         this.numeroSemanas = 0;
-
     }
 
     public void defineHorasDescanso(int valor) {
         this.horasDescanso = valor;
     }
+
     public void defineNumeroSemanas(int valor) {
         this.numeroSemanas = valor;
     }
 
     public String getStatusGeral() {
         if (numeroSemanas <= 0) {
-            return "Cansado";
+            return "cansado";
         }
         double mediaSemanal = (double) horasDescanso / numeroSemanas;
-        if (mediaSemanal >= LIMITE_HORAS_DESCANSO_SEMANAL) { return "Descansado"; }
-        return "Cansado";
+        if (mediaSemanal >= LIMITE_HORAS_DESCANSO_SEMANAL) {
+            return "descansado";
+        }
+        return "cansado";
     }
 }
+
 
 

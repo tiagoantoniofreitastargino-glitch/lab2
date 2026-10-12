@@ -51,14 +51,11 @@ public class Coisa {
         meusResumos.adiciona("Classes", "Classes definem um tipo e a base de código para criação de objetos.");
         meusResumos.adiciona("Tipo", "Identifica a semântica (operações e significados) de um conjunto de dados.");
 
-
         String[] resumos = meusResumos.pegaResumos();
-
 
         for (int i = 0; i < meusResumos.conta(); i++) {
             System.out.println(resumos[i]);
         }
-
 
         System.out.println();
         System.out.println("Resumos: ");
